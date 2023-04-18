@@ -1,4 +1,4 @@
-const throttle = require('lodash.throttle');
+import throttle from 'lodash.throttle';
 
 const STORAGE_KEY = 'feedback-form-state';
 
@@ -21,11 +21,8 @@ function onForm(evt) {
 
   localStorage.removeItem(STORAGE_KEY);
 
-  console.log(formData)
-
+  console.log(formData);
 }
-
-
 
 function onInput(evt) {
   formData[evt.target.name] = evt.target.value;
